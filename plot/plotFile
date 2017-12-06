@@ -1,0 +1,18 @@
+#!/usr/bin/gnuplot
+reset
+set terminal png size 1000,1000
+
+set xlabel "Nb d'éléments"
+set ylabel "Temps"
+
+set multiplot layout 4,2 rowsfirst
+
+plot "plot/testPerfLineaire.txt" title "Lineaire"
+plot "plot/testPerfQuad1.txt" title "Quadratique"
+plot "plot/testPerfQuad2.txt" title "Quadratique avec M premier"
+plot "plot/testPerfDoublePremier1.txt" title "DoublePremier avec M non premier"
+plot "plot/testPerfDoublePremier2.txt" title "DoublePremier2 avec M premier"
+plot "plot/testPerfDoublePuissance1.txt" title "DoublePuissance1 avec M non une puissance de deux"
+plot "plot/testPerfDoublePuissance2.txt" title "DoublePuissance2 avec M une puissance de deux"
+
+
